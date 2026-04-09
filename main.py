@@ -62,7 +62,7 @@ async def handler(event):
         return
     sent_hashes[key] = now
 
-    delay = random.randint(3, 10)
+    delay = random.randint(3, 6)
     asyncio.create_task(forward(event.message, delay))
 
 async def forward(message, delay):
